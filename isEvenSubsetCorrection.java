@@ -9,37 +9,26 @@ public class HelloWorld{
      
      
      static int correction(int m, int n){
-         int length =(m > n) ? m : n;
-         int a, b;
-         if (length == m)
-           {
-            a = m;
-            b = n;
-            }
-           else
-               {
-            a = n;
-            b = m;
-             }
+   
          int ans=1;
          int evenmf=0;
          int evennf=0;
-         for(int i=2; i<length; i++)
+         for(int i=2; i<m; i++)
          {   
-             if (a%i==0&&i%2==0){  
+             if (m%i==0&&i%2==0){  
                   evenmf=i;
-               System.out.println(evenmf);
-              if(b%i==0 && i%2==0){
+            //    System.out.println(evenmf);
+              if(n%i==0 && i%2==0){
                   evennf=i;
-                  System.out.println(evennf);
+                //   System.out.println(evennf);
               }
               if(evenmf!=evennf){
                   ans=0;
-                  break;
+                  //break;
               }
               }
          }
-         System.out.println(ans);
-          return 1;
+        //  System.out.println(ans);
+          return ans;
      }
 }
