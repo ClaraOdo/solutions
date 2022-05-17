@@ -11,9 +11,13 @@ public class HelloWorld{
         int fir=0;
         int ans=0;
         int sec=0;
+        int k=0;
+        int [] evenArray= new int[a.length];
                 if (a.length%2==0){
         for (int i = 0; i < mid; i++){
                      fir+=a[i];
+                     evenArray[k]=a[i];
+                     k++;
         }
         for (int j= a.length-1; j >=mid; j--){
                      sec+=a[j]; 
@@ -21,6 +25,7 @@ public class HelloWorld{
         
         if(fir==sec){
              ans=1;
+             System.out.println(evenArray);
             System.out.println(ans);
            return 1; 
         }
